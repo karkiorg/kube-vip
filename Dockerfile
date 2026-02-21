@@ -2,6 +2,7 @@
 
 FROM golang:1.26.0-alpine3.23 as dev
 RUN apk add --no-cache git ca-certificates make
+RUN apk upgrade --no-cache
 RUN adduser -D appuser
 COPY . /src/
 WORKDIR /src
